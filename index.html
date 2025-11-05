@@ -15,11 +15,37 @@
   </head>
 
   <!-- ----- Scripts ----- -->
+  <script src="./js/helpers.js"></script>
   <script src="./js/themeManager.js" defer></script>
+  <script src="./js/scripts.js" defer></script>
 
   <body>
-    <header>
-      <h1>Projeto MoCH</h1>
+    <header id="header-top-bar">
+      <div class="div-top-bar-not-collapsible">
+        <h1>Projeto MoCH</h1>
+
+        <button id="button-menu-toggle">
+          <img
+            class="svg-list"
+            src="./assets/icons/list.svg"
+            alt="Menu"
+            onload="buscarSvg(this);"
+          />
+          <img
+            class="svg-x-lg"
+            src="./assets/icons/x-lg.svg"
+            alt="Menu"
+            onload="buscarSvg(this);"
+          />
+        </button>
+      </div>
+      <div class="div-top-bar-collapsible">
+        <ul>
+          <li><a href="./index.html">Início</a></li>
+          <li><a href="./about.html">Sobre</a></li>
+          <li><a href="./contact.html">Contato</a></li>
+        </ul>
+      </div>
     </header>
 
     <main>

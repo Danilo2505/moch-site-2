@@ -15,7 +15,7 @@ i {
 }
 
 small {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #666;
 }
 
@@ -23,8 +23,8 @@ small {
 blockquote {
   font-style: italic;
   border-left: 4px solid #ccc;
-  padding-left: 1rem;
-  margin: 1rem 0;
+  padding-left: 1.2rem;
+  margin: 1.2rem 0;
   color: #444;
 }
 
@@ -40,12 +40,12 @@ span,
 li,
 td,
 th {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 400;
 }
 
 label {
-  line-height: 1.25;
+  line-height: 1.35;
   margin: 0.5rem 0 0.5rem;
   font-weight: 600;
 }
@@ -63,28 +63,59 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.9rem;
 }
 h2 {
-  font-size: 2.25rem;
+  font-size: 2.6rem;
 }
 h3 {
-  font-size: 2rem;
+  font-size: 2.3rem;
 }
 h4 {
-  font-size: 1.75rem;
+  font-size: 2rem;
 }
 h5 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 label,
 h6 {
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-weight: 500;
 }
 
 /* Responsividade: tablets */
 @media (max-width: 768px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+  h4 {
+    font-size: 1.45rem;
+  }
+  h5 {
+    font-size: 1.3rem;
+  }
+  label,
+  h6 {
+    font-size: 1.15rem;
+  }
+
+  p,
+  span,
+  li,
+  td,
+  th {
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsividade: celulares */
+@media (max-width: 480px) {
   h1 {
     font-size: 2rem;
   }
@@ -92,13 +123,13 @@ h6 {
     font-size: 1.75rem;
   }
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
   }
   h4 {
     font-size: 1.25rem;
   }
   h5 {
-    font-size: 1.125rem;
+    font-size: 1.1rem;
   }
   label,
   h6 {
@@ -110,42 +141,11 @@ h6 {
   li,
   td,
   th {
-    font-size: 0.95rem;
-  }
-}
-
-/* Responsividade: celulares */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.75rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  h3 {
-    font-size: 1.25rem;
-  }
-  h4 {
-    font-size: 1.125rem;
-  }
-  h5 {
     font-size: 1rem;
-  }
-  label,
-  h6 {
-    font-size: 0.95rem;
-  }
-
-  p,
-  span,
-  li,
-  td,
-  th {
-    font-size: 0.9rem;
   }
 
   blockquote {
-    font-size: 0.95rem;
-    padding-left: 0.75rem;
+    font-size: 1rem;
+    padding-left: 1rem;
   }
 }
