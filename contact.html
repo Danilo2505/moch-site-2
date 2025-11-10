@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato - Projeto MoCH</title>
+
+    <!-- ----- CSS ----- -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/colors.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <!-- --- CSS Específico --- -->
+    <link rel="stylesheet" href="./css/pages/contact.css" />
+  </head>
+
+  <!-- ----- Scripts ----- -->
+  <script src="./js/helpers.js"></script>
+  <script src="./js/themeManager.js" defer></script>
+  <script src="./js/scripts.js" defer></script>
+
+  <body>
+    <header id="header-top-bar">
+      <div class="div-top-bar-not-collapsible">
+        <h1>Contato - Projeto MoCH</h1>
+
+        <button id="button-menu-toggle">
+          <img
+            class="svg-list"
+            src="./assets/icons/list.svg"
+            alt="Menu"
+            onload="buscarSvg(this);"
+          />
+          <img
+            class="svg-x-lg"
+            src="./assets/icons/x-lg.svg"
+            alt="Menu"
+            onload="buscarSvg(this);"
+          />
+        </button>
+      </div>
+      <div class="div-top-bar-collapsible">
+        <ul>
+          <li><a href="./index.html">Início</a></li>
+          <li><a href="./about.html">Sobre</a></li>
+          <li><a href="./contact.html">Contato</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section id="section-contact">
+        <h2>Entre em Contato</h2>
+        <p>
+          Deseja saber mais sobre o projeto, colaborar ou propor melhorias?
+          Envie uma mensagem!
+        </p>
+
+        <form id="form-contact">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+
+        <div class="div-contact-info">
+          <p><strong>E-mail:</strong> projetomochpbl@gmail.com</p>
+          <p>
+            <strong>Escola:</strong> EEEP Paulo Barbosa Leite — Caririaçu, CE
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="div-footer-container">
+        <div class="div-footer-about">
+          <h3>MoCH</h3>
+          <p>
+            Monitoramento dos Corpos Hídricos — tecnologia acessível para
+            proteger comunidades ribeirinhas e agricultores.
+          </p>
+        </div>
+
+        <div class="div-footer-links">
+          <h4>Links úteis</h4>
+          <ul>
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="./about.html">Sobre o Projeto</a></li>
+            <li><a href="./contact.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="div-footer-contact">
+          <h4>Contato</h4>
+          <p>EEEP Paulo Barbosa Leite — Caririaçu, CE</p>
+          <p>
+            Email:
+            <a href="mailto:projetomochpbl@gmail.com"
+              >projetomochpbl@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="div-footer-bottom">
+        <p>© 2025 MoCH — Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- --- Botão de Tema --- -->
+    <button id="button-tema" aria-label="Mudar tema"></button>
+  </body>
+</html>

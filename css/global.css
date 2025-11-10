@@ -19,7 +19,6 @@ body {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
 header,
@@ -27,6 +26,11 @@ main,
 footer {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+header,
+main {
+  margin-bottom: 1rem;
 }
 
 /* ----- Cabeçalho ----- */
@@ -42,11 +46,6 @@ header {
 
 /* ----- Principal ----- */
 main {
-}
-
-/* ----- Rodapé ----- */
-footer {
-  margin-bottom: 1rem;
 }
 
 /* ----- Botões ----- */
@@ -104,6 +103,7 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 #button-menu-toggle {
@@ -119,7 +119,7 @@ svg {
   /* aspect-ratio: 1 / 1; */
 }
 
-/* --- Abrir Menu --- */
+/* --- Menu Fechado e Botão de Abrir Menu --- */
 #button-menu-toggle .svg-list {
   display: block;
 }
@@ -129,7 +129,7 @@ svg {
   display: none;
 }
 
-/* --- Fechar Menu --- */
+/* --- Menu Aberto e Botão de Fechar Menu --- */
 #button-menu-toggle[close] .svg-list {
   display: none;
 }
@@ -165,4 +165,133 @@ svg {
 button:hover svg {
   transform: scale(1.1);
   transition: 0.3s;
+}
+
+/* ----- Animações ----- */
+/* --- Menu recolhido (padrão) --- */
+#header-top-bar .div-top-bar-collapsible {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+/* --- Quando o menu está aberto --- */
+#header-top-bar.menu-open .div-top-bar-collapsible {
+  max-height: 300px; /* ajuste conforme o conteúdo */
+  opacity: 1;
+}
+
+#header-top-bar.menu-open .div-top-bar-collapsible {
+  padding-bottom: 1rem;
+}
+
+/* --- Ícones do botão --- */
+#button-menu-toggle .svg-x-lg {
+  display: none;
+}
+
+#header-top-bar.menu-open #button-menu-toggle .svg-list {
+  display: none;
+}
+
+#header-top-bar.menu-open #button-menu-toggle .svg-x-lg {
+  display: block;
+}
+
+/* --- Transição dos itens internos (opcional, mais bonito) --- */
+.div-top-bar-collapsible li {
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+#header-top-bar.menu-open .div-top-bar-collapsible li {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ----- Seção Hero ----- */
+#section-hero {
+  display: flex;
+  flex-direction: column;
+}
+
+#section-hero img {
+  width: 100%;
+}
+
+/* ----- Rodapé ----- */
+footer {
+  background-color: var(--bg-color-2);
+  color: var(--bg-color-5);
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+  border-top: 1px solid var(--bg-color-6);
+}
+
+.div-footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.div-footer-container div {
+  flex: 1;
+  min-width: 220px;
+}
+
+.div-footer-about h3 {
+  font-size: 1.5em;
+  color: var(--accent-color-4);
+  margin-bottom: 10px;
+}
+
+.div-footer-links h4,
+.div-footer-contact h4 {
+  color: var(--accent-color-3);
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+
+.div-footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.div-footer-links a {
+  color: var(--bg-color-4);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.div-footer-links a:hover {
+  color: var(--accent-color-4);
+}
+
+.div-footer-contact a {
+  color: var(--accent-color-4);
+  text-decoration: none;
+}
+
+.div-footer-contact a:hover {
+  color: var(--accent-color-3);
+}
+
+.div-footer-bottom {
+  text-align: center;
+  border-top: 1px solid var(--bg-color-3);
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 0.9em;
+  color: var(--bg-color-5);
 }
