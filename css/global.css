@@ -46,6 +46,8 @@ header {
 
 /* ----- Principal ----- */
 main {
+  max-width: 1000px;
+  align-self: center;
 }
 
 /* ----- Botões ----- */
@@ -217,14 +219,8 @@ button:hover svg {
   opacity: 1;
 }
 
-/* ----- Seção Hero ----- */
-#section-hero {
-  display: flex;
-  flex-direction: column;
-}
-
-#section-hero img {
-  width: 100%;
+.a-learn-more {
+  font-size: 1.2rem;
 }
 
 /* ----- Rodapé ----- */
