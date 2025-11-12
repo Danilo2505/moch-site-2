@@ -46,6 +46,8 @@ header {
 
 /* ----- Principal ----- */
 main {
+  max-width: 1000px;
+  align-self: center;
 }
 
 /* ----- Botões ----- */
@@ -217,14 +219,8 @@ button:hover svg {
   opacity: 1;
 }
 
-/* ----- Seção Hero ----- */
-#section-hero {
-  display: flex;
-  flex-direction: column;
-}
-
-#section-hero img {
-  width: 100%;
+.a-learn-more {
+  font-size: 1.2rem;
 }
 
 /* ----- Rodapé ----- */
@@ -294,4 +290,43 @@ footer {
   padding-top: 15px;
   font-size: 0.9em;
   color: var(--bg-color-5);
+}
+
+@media (min-width: 1024px) {
+  #header-top-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #button-menu-toggle {
+    display: none;
+  }
+
+  #header-top-bar .div-top-bar-not-collapsible,
+  #header-top-bar .div-top-bar-collapsible {
+    width: fit-content;
+    width: 600px;
+  }
+
+  #header-top-bar .div-top-bar-collapsible {
+    display: flex;
+    flex-direction: row;
+    padding: 0 1rem 0 0;
+    max-height: 300px;
+    opacity: 1;
+    justify-content: end;
+  }
+
+  #header-top-bar .div-top-bar-collapsible ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  #header-top-bar .div-top-bar-collapsible li {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
